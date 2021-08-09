@@ -1,5 +1,5 @@
 [package]
-name = "markets"
+name = "market_types"
 version = "0.1.0"
 authors = ["Justin Simerly <justin.simerly@endress.com>"]
 edition = "2018"
