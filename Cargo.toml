@@ -1,0 +1,27 @@
+[package]
+name = "markets"
+version = "0.1.0"
+authors = ["Justin Simerly <justin.simerly@endress.com>"]
+edition = "2018"
+description = "Common implementations of a market"
+license = "MIT"
+repository = "https://github.com/jsim2010/markets"
+readme = "README.md"
+keywords = ["market"]
+categories = ["rust-patterns"]
+
+[dependencies]
+crossbeam-channel = { version = "0.5.1", optional = true }
+crossbeam-queue = { version = "0.3.2", optional = true }
+fehler = "1.0.0"
+log = "0.4.8"
+market = "0.30.1"
+winapi = { version = "0.3.9", features = ["namedpipeapi"] }
+
+[features]
+unstable-doc-cfg = []
+std = ["market/std"]
+thread = ["std", "crossbeam-queue"]
+
+[package.metadata.docs.rs]
+rustc-args = ["--all-features"]
